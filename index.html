@@ -5,16 +5,19 @@
     <meta charset="utf-8"/>
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="./css/invie.css" />
+    <link rel="stylesheet" href="./css/media-queries.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
   <body>
     <section id="portada" class="portada background"> <!-- portada -->
       <header id="header" class="header contenedor"> <!-- header -->
         <!-- logotipo -->
         <figure class="logotipo">
-          <img src="./images/invie.png" width="186" height="60" alt="Invie logotipo" />
+          <img src="./images/invie.png" srcset="./images/invie.png 1x, ./images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo" />
         </figure>
+        <span class="burguer-button icon-menu" id="burguer-button"></span>
         <!-- menu -->
-        <nav class="menu">
+        <nav class="menu" id="menu">
           <ul>
             <li>
               <a href="index.html">Home</a>
@@ -40,9 +43,16 @@
     <section id="guitarras" class="guitarras contenedor"> <!-- guitars -->
       <!-- titulo -->
       <h2>Nuestras guitarras</h2>
+      <div class="video-demo-contenedor">
+        <div class="video-demo">
+          <div class="contenedor-video-responsive">
+            <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
       <!-- guitarra1 -->
       <article class="guitarra">
-        <img class="right" src="./images/invie-acustica.png" alt="Guitarra Invie Acustica" width="350" />
+        <img class="right" data-src="./images/invie-acustica.png|./images/invie-acustica2x.png" alt="Guitarra Invie Acustica" width="350" />
         <div class="contenedor-guitarra-a">
           <h3 class="title-b">Invie Acústica</h3>
           <ol>
@@ -54,7 +64,7 @@
       </article>
       <!-- guitarra2 -->
       <article class="guitarra b">
-        <img class="left" src="./images/invie-classic.png" alt="Guitarra Invie Classic" width="350" />
+        <img class="left" data-src="./images/invie-classic.png|./images/invie-classic2x.png" alt="Guitarra Invie Classic" width="350" />
         <div class="contenedor-guitarra-b">
           <h3 class="title-b">Invie Classic</h3>
           <ol>
@@ -68,7 +78,7 @@
     <footer class="footer">
       <div class="contenedor">
         <div class="contacto">
-          <img src="./images/invie-white.png" alt="logotip blanco">
+          <img data-src="./images/invie-white.png" alt="logotip blanco">
           <a href="tel:+516281381"><strong>Teléfono </strong><span>628-1381</span></a>
           <a href="mailto:contacto@invie.com"><strong>E-mail </strong><span>contacto@invie.com</span></a>
         </div>
@@ -111,11 +121,14 @@
             <label for="comentarios">
               Comentarios 
             </label>
-            <textarea name="comentarios" id="comentarios" cols="30" rows="7"></textarea>
+            <textarea name="comentarios" id="comentarios" cols="25" rows="7"></textarea>
             <input type="submit" value="Enviar" class="button"/>
           </div>
         </form>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>

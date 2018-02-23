@@ -5,6 +5,8 @@
     <meta charset="utf-8"/>
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="./css/invie.css" />
+    <link rel="stylesheet" href="./css/media-queries.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
   <body>
     <header id="header" class="header background"> <!-- header -->
@@ -13,8 +15,9 @@
         <figure class="logotipo">
           <img src="./images/invie.png" width="186" height="60" alt="Invie logotipo" />
         </figure>
+        <span class="burguer-button icon-menu" id="burguer-button"></span>
         <!-- menu -->
-        <nav class="menu">
+        <nav class="menu" id="menu">
           <ul>
             <li>
               <a href="index.html">Home</a>
@@ -37,6 +40,9 @@
               <th>Modelo</th>
               <th>Precio</th>
               <th>Descripción</th>
+              <th>Modelo</th>
+              <th>Precio</th>
+              <th>Descripción</th>
             </tr>
           </thead>
           <tbody>
@@ -44,13 +50,22 @@
               <td>Invie Classic</td>
               <td>$ 100</td>
               <td>Una guitarra muy pro</td>
-            </tr>
-            <tr>
               <td>Invie Classic</td>
               <td>$ 100</td>
               <td>Una guitarra muy pro</td>
             </tr>
             <tr>
+              <td>Invie Classic</td>
+              <td>$ 100</td>
+              <td>Una guitarra muy pro</td>
+              <td>Invie Classic</td>
+              <td>$ 100</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+            <tr>
+              <td>Invie Classic</td>
+              <td>$ 100</td>
+              <td>Una guitarra muy pro</td>
               <td>Invie Classic</td>
               <td>$ 100</td>
               <td>Una guitarra muy pro</td>
@@ -111,5 +126,8 @@
         </form>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
